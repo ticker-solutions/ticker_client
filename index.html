@@ -25,38 +25,20 @@
 
         <!-- top nav -->
         <div class="topNav visible-lg visible-md visible-sm">
-             <a href="#" ng-show="isHidden" ng-click="isHidden=false" class="language" onclick="window.lang.change('en'); return false;"><strong>English</strong></a>
-            <a href="#" ng-hide="isHidden" ng-click="isHidden=true" class="language" onclick="window.lang.change('es'); return false;"><strong>Spanish</strong></a>           
+            <a href="#" ng-show="isHidden" ng-click="isHidden=false" class="language" onclick="window.lang.change('en'); return false;"><strong>English</strong></a>
+            <a href="#" ng-hide="isHidden" ng-click="isHidden=true" class="language" onclick="window.lang.change('es'); return false;"><strong>Spanish</strong></a>
             <a href="javascript:;" class="contactUs" data-toggle="modal" data-target="#contactModal"><strong>Contact Us</strong></a>
             <a href="javascript:;" class="logIn" data-toggle="modal" data-target="#loginModal"><strong>Login</strong> <img src="assets/img/loginLock.png"></a>
         </div>
 
-        <!-- home tittle text -->
-        <div class="titleText theChickenLove_font">
-            The only way to feel your <span>dreams</span> are coming <span>true</span> is
-            <br> having them close to your <span>mind</span> and your <span>eyes.</span>
-        </div>
+        
+        <div ng-view></div>
 
-        <!-- video wrapper -->
-        <div class="videoHome clearfix relative">
-            <img src="assets/img/chalkTopLeft.png" class="chalkTopLeft">
-            <img src="assets/img/chalkTopRight.png" class="chalkTopRight">
-            <img src="assets/img/transportador.png" class="transportador">
-            <img src="assets/img/handVideo.png" class="handVideo">
-            <img src="assets/img/chalk.png" class="chalk">
-            <img src="assets/img/eraser.png" class="eraser">
-            <img src="assets/img/legoVideoLeft.png" class="legoVideoLeft">
-            <img src="assets/img/legoVideoRight.png" class="legoVideoRight">
-
-
-            <div class="videoWrapper relative">
-                <iframe src="https://www.youtube.com/embed/jFssI4JJyh8?rel=0&showinfo=0&controls=0" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
 
 
     </div>
 
+ 
     <nav class="navbar navbar-default navbar-fixed-bottom bottom-nav">
         <div class="container">
 

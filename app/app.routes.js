@@ -13,6 +13,11 @@ angular.module('tickerApp').config(function($routeProvider) {
             templateUrl : 'app/components/leader/leaderView.html',
             controller  : 'facilitatorLeaderController'
         })
+    
+        // route for the about page
+        .when('/', {
+            templateUrl : 'app/components/whatDoWeDo/whatDoWeDo.html',            
+        })
 
 
 });
