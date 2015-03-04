@@ -1,0 +1,19 @@
+<!-- leaderView.html -->
+<div class="jumbotron text-center">
+
+    <hr>
+
+
+        <select   ng-model="selectedCountry" ng-options="item as item.name for item in countries" ng-change="grabCities()">
+            <option value="">Select a country</option>
+        </select>
+
+        <select ng-model="selectedCity" ng-options="item.city_id as item.name for item in cities">
+            <option value="">Select a city</option>
+        </select>
+        <input type="submit" value="Submit Form">
+
+
+
+
+</div>

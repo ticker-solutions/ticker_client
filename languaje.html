@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>Hello AngularJS</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.js"></script>
+    
+    
+
+    <script src="assets/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="assets/libs/jquery-cookie.js" charset="utf-8" type="text/javascript"></script>
+    <script src="assets/libs/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        var lang = new Lang('en');
+        lang.dynamic('es', 'assets/js/langpack/es.json');
+    </script>
+
+
+    <style>
+        .modalDialog {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 99999;
+            opacity:0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+        }
+
+        .modalDialog:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+
+        .modalDialog > div {
+            width: 400px;
+            position: relative;
+            margin: 10% auto;
+            padding: 5px 20px 13px 20px;
+            border-radius: 10px;
+            background: #fff;
+            background: -moz-linear-gradient(#fff, #999);
+            background: -webkit-linear-gradient(#fff, #999);
+            background: -o-linear-gradient(#fff, #999);
+        }
+
+        .close {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            position: absolute;
+            right: -12px;
+            text-align: center;
+            top: -10px;
+            width: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -moz-box-shadow: 1px 1px 3px #000;
+            -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
+        }
+
+        .close:hover { background: #00d9ff; }
+
+    </style>
+
+</head>
+
+<body>
+<!--
+<div ng-controller="Hello">
+    <p>The ID is {{greeting.company_id}}</p>
+    <p>The content is {{greeting.name}}</p>
+</div>
+-->
+
+
+<header>
+    <div id="logo" style="border: 2px solid; width: 20%; height: 100px;float: left">
+
+    </div>
+    <div id="superiorMenu" style="float: left; border: 2px solid; width: 50%; margin-left: 28%;height: 100px">
+        <a href="#openModal"><div lang="en" style="padding: 0px 5px 0px 5px; float: left; border: 2px solid; width: auto; margin: 4% 0% 0% 14%; height: 20px;" align="center">Contact us</div></a>
+        <a href="#openModal"><div lang="en" style="padding: 0px 5px 0px 5px; float: left; border: 2px solid; width: auto; margin: 4% 0% 0% 14%; height: 20px;" align="center">Login</div></a>
+        <a href="#" onclick="window.lang.change('es'); return false;"><div lang="en" style="padding: 0px 5px 0px 5px; float: left; border: 2px solid; width: auto; margin: 4% 0% 0% 14%; height: 20px;" align="center">Spanish</div></a>
+        <a href="#" onclick="window.lang.change('en'); return false;"><div lang="en" style="padding: 0px 5px 0px 5px; float: left; border: 2px solid; width: auto; margin: 4% 0% 0% 14%; height: 20px;" align="center">English</div></a>
+    </div>
+
+
+</header>
+
+
+<div style="margin-top: 20px; float: left; height: 200px; width: 100%; border: 2px solid">
+
+</div>
+
+<div style="margin-top: 20px; float: left; height: 100px; width: 100%; border: 2px solid">
+
+</div>
+
+<footer>
+
+    <div style="float: left; margin-top: 20px; width: 30%; border: 2px solid">
+        <p lang="en">The only way to...</p>
+    </div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Modal Box</h2>
+        <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+        <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+    </div>
+</div>
+
+
+</body>
+</html>

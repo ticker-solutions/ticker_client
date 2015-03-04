@@ -1,0 +1,15 @@
+{
+	"token": {
+		"Spanish":"Español",
+		"English":"Ingles",
+		"Contact us":"Contactanos",
+		"Login":"Entrar",
+		"The only way to...":"La unica forma de...",
+        "What do we do?":"Que hacemos?"
+	},
+	"regex": [
+		["Budget", "งบประมาณ"],
+		["^Something at start of text", ""],
+		["This will be case insensitive", "i", ""]
+	]
+}

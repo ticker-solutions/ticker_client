@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="tickerApp">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Ticker</title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+</head>
+
+<body>
+    <div class="container relative">
+
+        <!-- logo -->
+        <a href="index.html" class="logoHeader"><img src="assets/img/logo.png" alt="Ticker">
+        </a>
+
+        <!-- top nav -->
+        <div class="topNav visible-lg visible-md visible-sm">
+             <a href="#" ng-show="isHidden" ng-click="isHidden=false" class="language" onclick="window.lang.change('en'); return false;"><strong>English</strong></a>
+            <a href="#" ng-hide="isHidden" ng-click="isHidden=true" class="language" onclick="window.lang.change('es'); return false;"><strong>Spanish</strong></a>           
+            <a href="javascript:;" class="contactUs" data-toggle="modal" data-target="#contactModal"><strong>Contact Us</strong></a>
+            <a href="javascript:;" class="logIn" data-toggle="modal" data-target="#loginModal"><strong>Login</strong> <img src="assets/img/loginLock.png"></a>
+        </div>
+
+        <!-- home tittle text -->
+        <div class="titleText theChickenLove_font">
+            The only way to feel your <span>dreams</span> are coming <span>true</span> is
+            <br> having them close to your <span>mind</span> and your <span>eyes.</span>
+        </div>
+
+        <!-- video wrapper -->
+        <div class="videoHome clearfix relative">
+            <img src="assets/img/chalkTopLeft.png" class="chalkTopLeft">
+            <img src="assets/img/chalkTopRight.png" class="chalkTopRight">
+            <img src="assets/img/transportador.png" class="transportador">
+            <img src="assets/img/handVideo.png" class="handVideo">
+            <img src="assets/img/chalk.png" class="chalk">
+            <img src="assets/img/eraser.png" class="eraser">
+            <img src="assets/img/legoVideoLeft.png" class="legoVideoLeft">
+            <img src="assets/img/legoVideoRight.png" class="legoVideoRight">
+
+
+            <div class="videoWrapper relative">
+                <iframe src="https://www.youtube.com/embed/jFssI4JJyh8?rel=0&showinfo=0&controls=0" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom bottom-nav">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><strong>Why do i need happiness <br>
+                  at my company? </strong></a>
+                    </li>
+                    <li><a href="#"><strong>Who has choose <br>
+                  dream with us ?</strong></a>
+                    </li>
+                    <li><a href="#"><strong>Who are we?</strong></a>
+                    </li>
+                    <li><a href="#"><strong><p lang="en">What do we do?</p></strong></a>
+                    </li>
+                    <li class="visible-xs"><a href="javascript:;" data-toggle="modal" data-target="#loginModal"><strong>Login</strong></a>
+                    </li>
+                    <li class="visible-xs"><a href="javascript:;" data-toggle="modal" data-target="#contactModal"><strong>Contact Us</strong></a>
+                    </li>
+                    <li class="visible-xs"><a href="#" onclick="window.lang.change('es'); return false;"><strong>Spanish</strong></a>
+                    </li>
+                    <li class="visible-xs"><a href="#" onclick="window.lang.change('en'); return false;"><strong>English</strong></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+            <!-- redes desktop -->
+            <div class="socialMedia">
+                <div class="title theChickenLove_font">
+                    <strong>Follow us</strong>
+                </div>
+                <a href="" class="facebookBtn"><img src="assets/img/facebookBtn.png">
+                </a>
+                <a href="" class="twitterBtn"><img src="assets/img/twitterBtn.png">
+                </a>
+                <a href="" class="youtubeBtn"><img src="assets/img/youtubeBtn.png">
+                </a>
+            </div>
+            <!-- redes desktop -->
+
+        </div>
+
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body relative">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="assets/img/modalClose.png">
+                    </button>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <form>
+                                <div class="form-group">
+                                    <label for="userLogin">Usuario</label>
+                                    <input type="email" class="form-control" id="userLogin">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userPassword">Contraseña</label>
+                                    <input type="email" class="form-control" id="userPassword">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button type="submit" class="modalEnter theChickenLove_font">entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal -->
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Modal -->
+
+
+    <!-- angular libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js" type="text/javascript"></script>
+    <script src="http://m-e-conroy.github.io/angular-dialog-service/javascripts/dialogs.min.js" type="text/javascript"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+
+
+    <!-- jquery and language libraries -->
+    <script src="assets/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <!--<script src="assets/libs/jquery-cookie.js" charset="utf-8" type="text/javascript"></script>-->
+    <script src="assets/libs/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="assets/js/loadLanguage.js" type="text/javascript"></script>
+
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

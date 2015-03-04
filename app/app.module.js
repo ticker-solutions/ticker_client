@@ -1,0 +1,1 @@
+angular.module('tickerApp', ['ngRoute','ngResource','ui.bootstrap','dialogs']);

@@ -1,0 +1,314 @@
+@font-face {
+    font-family: 'the_chicken_love_storyregular';
+    src: url('../fonts/the_chicken_love_story-webfont.eot');
+    src: url('../fonts/the_chicken_love_story-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/the_chicken_love_story-webfont.woff2') format('woff2'),
+         url('../fonts/the_chicken_love_story-webfont.woff') format('woff'),
+         url('../fonts/the_chicken_love_story-webfont.ttf') format('truetype'),
+         url('../fonts/the_chicken_love_story-webfont.svg#the_chicken_love_storyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.theChickenLove_font{
+  font-family: 'the_chicken_love_storyregular';
+}
+
+body{
+  background-image: url(../img/bg-body.jpg);
+  background-position: center top;
+}
+a, a:hover{
+  text-decoration: none;
+}
+.relative{
+  position: relative;
+}
+.navbar-default {
+  background: none;
+  border: none;
+  -webkit-box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:    0px -10px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow:         0px -10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 767px) {
+  .navbar-default {
+    background: #f1c410;
+    border: none;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow:    0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow:         0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+@media (min-width: 768px) {  
+  .bottom-nav{
+    height: 135px;
+  }
+}
+.navbar-default .navbar-toggle {
+  border-color: #4f8ec8;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #4f8ec8;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #4f8ec8;
+}
+@media (min-width: 768px) {  
+  .navbar-nav > li {
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+  .navbar-nav > li > a {
+    background-image: url(../img/bg-btn-nav.png);
+    background-repeat: repeat-x;
+    height: 66px;
+    padding: 18px 25px 0px 25px;
+  }
+  .navbar-nav > li > a:hover {
+    color: #fff;
+    background-image: url(../img/bg-btn-nav_hover.png);
+  }
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 17px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .nav > li:hover {
+    background-color: #f18b10;
+  }
+}
+.navbar-fixed-bottom .container {
+  position: relative;
+}
+.socialMedia{
+  position: absolute;
+  top: -134px;
+  left: 20px;
+  width: 126px;
+  height: 91px;
+  background-image: url(../img/bgRedes.png);
+}
+@media (max-width: 767px) {  
+  .socialMedia{
+    top: -95px;
+    left: 10px;
+  }
+}
+.socialMedia .title{
+  width: 93%;
+  height: auto;
+  text-align: center;
+  color: #5391cb;
+  font-size: 23px;
+  line-height: 23px;
+}
+.facebookBtn, .twitterBtn, .youtubeBtn{
+  position: absolute;
+  display: block;
+  top: 36px;
+  width: 34px;
+  height: 39px;
+  transition: all 0.3s ease;
+}
+.facebookBtn img, .twitterBtn img, .youtubeBtn img{
+  width: 100%;
+}
+.facebookBtn{
+  left: 3px;
+}
+.twitterBtn{
+  left: 40px;
+}
+.youtubeBtn{
+  left: 77px;
+}
+.facebookBtn:hover, .twitterBtn:hover, .youtubeBtn:hover{
+  width: 40px;
+  height: 47px;
+  top: 33px;
+}
+.facebookBtn:hover{
+  left: 0px;
+}
+.twitterBtn:hover{
+  left: 37px;
+}
+.youtubeBtn:hover{
+  left: 74px;
+}
+.topNav{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 470px;
+  height: auto;
+}
+.language, .contactUs, .logIn{
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 162px;
+  height: 36px;
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  background-position: 0px 0px;
+  background-image: url(../img/topNavBtn_bg.png);
+}
+/* .language:hover, .contactUs:hover, .logIn:hover{
+  color: #999;
+  background-position: 0px -36px;
+} */
+.language{
+  left: 0px;
+}
+.contactUs{
+  left: 112px;
+  color: #999;
+  background-position: 0px -36px;
+}
+.logIn{
+  top: -3px;
+  left: 249px;
+  width: 222px;
+  background-image: url(../img/topNavBtnLogin_bg.png);
+}
+.logIn img{
+  display: inline-block;
+}
+.logoHeader{
+  position: absolute;
+  display: block;
+  width: 186px;
+  height: auto;
+  top: 10px;
+  left: 40px;
+}
+.logoHeader img{
+  width: 100%;
+}
+@media (max-width: 767px) {  
+  .logoHeader{
+    left: 10px;
+    width: 80px;
+  }
+}
+.titleText{
+  width: 100%;
+  height: auto;
+  margin-top: 125px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 28px;
+  color: #fff;
+}
+.titleText span{
+  color: #efc24c;
+}
+.videoHome{
+  margin: 10px auto;
+  max-width: 635px;
+  height:auto;
+}
+.videoWrapper{
+  padding-bottom: 56.25%;
+  padding-top: 30px; 
+  height: 0; 
+  overflow: hidden;
+}
+.videoWrapper iframe,
+.videoWrapper object,
+.videoWrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.chalkTopLeft{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 1;
+}
+.chalkTopRight{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 1;
+}
+.handVideo{
+  position: absolute;
+  top: -158px;
+  right: -230px;
+  z-index: 1;
+}
+.transportador{
+  position: absolute;
+  top: 53px;
+  right: -105px;
+}
+.chalk{
+  position: absolute;
+  top: 168px;
+  right: -133px;
+}
+.eraser{
+  position: absolute;
+  top: 188px;
+  left: -106px;
+}
+.legoVideoLeft{
+  position: absolute;
+  bottom: -38px;
+  left: -25px;
+}
+.legoVideoRight{
+  position: absolute;
+  bottom: -35px;
+  right: -39px;
+}
+@media (max-width: 767px) {  
+  .handVideo, .chalk, .eraser, .transportador, .legoVideoRight, .legoVideoLeft{
+    display: none;
+  }
+}
+#loginModal .modal-content{
+  background-color: #cacaca;
+  border-radius: 20px;
+}
+#loginModal .close{
+  opacity: 1;
+}
+#loginModal .modal-body{
+  min-height: 280px;
+  background-position: right center;
+  background-image: url(../img/bgModalLogin.png);
+  background-repeat: no-repeat;
+}
+#loginModal .modalEnter{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -118px;
+  width: 237px;
+  height: 52px;
+  background: none;
+  background-image: url(../img/bgBtnEnterModal.png);
+  font-size: 38px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: underline;
+  color: #908e8e;
+  border: 0px;
+}
