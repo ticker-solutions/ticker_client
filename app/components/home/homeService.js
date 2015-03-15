@@ -1,9 +1,11 @@
+angular.module('tickerApp').factory('logInService', logInService);
 
+logInService.$inject = ['$resource'];
 
-angular.module('tickerApp').factory('UserFactory', function ($resource) {
+function logInService($resource) {
     return $resource('http://localhost:8080/TickerCore/rest/personEndpoint', {}, {
-        create: { method: 'POST' }
+        create: {
+            method: 'POST'
+        }
     })
-});
-
-
+}

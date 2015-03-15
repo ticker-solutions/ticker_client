@@ -1,1 +1,1 @@
-angular.module('tickerApp', ['ngRoute','ngResource','ui.bootstrap','dialogs']);
+angular.module('tickerApp', ['ngRoute','ngResource']);
