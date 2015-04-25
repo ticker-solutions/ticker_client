@@ -13,6 +13,12 @@ angular.module('tickerApp').config(function($routeProvider) {
             controller  : 'facilitatorLeaderController'
         })
     
+        // route for the about page
+        .when('/whoAreWe', {
+            templateUrl : 'app/components/whoAreWe/whoAreWe.html',
+            controller  : 'getPinTickerMembersController'            
+        })
+    
 
 
 });

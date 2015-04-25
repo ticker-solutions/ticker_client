@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Ticker</title>
+
+  <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <style>
+        li {
+        display: inline;
+        
+        }
+       
+    </style>
+</head>
+<body>
+  <div class="container relative">
+    
+   
+    <!-- who wrapper -->
+    <div ng-controller="getPinTickerMembersController" class="who-we-are clearfix relative container">
+      	<div class="row">
+      		<div class="col-sm-5">
+      			<div class="who-image-wrapper relative pull-right">
+      				<img ng-src="{{photo}}"/>
+      			</div>
+      			<div  class="who-pin-members">
+      				Integrantes:
+      				<div class="clearfix"></div>
+      				<ul id="tickerMemberListId">
+                        <li ng-repeat="(id,name) in tickerMembersNames" ng-click="loadTickerMemberData(id)">
+                            <a id="{{id}}" ng-class='{active:$first}' href="javascript:;">
+                                <span>{{name}}</span>
+                            </a> 
+                        </li>
+                    </ul>		
+      			</div>
+      			<img src="assets/img/legoVideoLeft.png" class="legoVideoLeft">
+      		</div>
+      		<div class="col-sm-7">
+      			<div class="whoTextWrapper relative pull-left">
+      				<img src="assets/img/legoVideoRight.png" class="legoVideoRight">
+      				<img src="assets/img/legoTopRight.png" class="legoWhoTopRightUp">
+      				<img src="assets/img/legoTopRight.png" class="legoWhoTopRightDown">
+	      			<img src="assets/img/transportador.png" class="transportador">
+	      			<img src="assets/img/chalk-solo.png" class="chalk">
+	      			
+	      			<div class="who-text-info-wrapper center-block">
+	      				<div class="who-name weight-bold">
+                            {{name}} <span class="theChickenLove_font weight-normal">{{lastName}}</span>
+	      				</div>
+	      				<div class="who-position weight-bold">
+                            {{position}}
+                        </div>
+                        <div class="who-info weight-normal">
+                            {{description}}
+                        </div>
+	      			</div>
+      			</div>
+      		</div>
+      	</div>
+    </div>
+    
+    
+  </div>
+
+
+</body>
+</html>  
