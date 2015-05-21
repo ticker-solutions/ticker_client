@@ -20,9 +20,9 @@ body{
 a, a:hover{
   text-decoration: none;
 }
-.container{
+/* .container{
   padding-bottom: 150px;
-}
+} */
 @media (max-width: 767px) {
   .container{
     padding-bottom: 0px;
@@ -164,6 +164,15 @@ a, a:hover{
 .youtubeBtn:hover{
   left: 74px;
 }
+.rights{
+  background-color: #fff;
+  height: 60px;
+  line-height: 60px;
+  color: #666666;
+}
+.rights span{
+  color: #5aa8e6;
+}
 .topNav{
   position: absolute;
   top: 0px;
@@ -171,7 +180,7 @@ a, a:hover{
   width: 470px;
   height: auto;
 }
-.language, .contactUs, .logIn{
+.language1, .language2, .contactUs, .logIn{
   display: block;
   position: absolute;
   top: 0px;
@@ -183,23 +192,29 @@ a, a:hover{
   background-position: 0px 0px;
   background-image: url(../img/topNavBtn_bg.png);
 }
-/* .language:hover, .contactUs:hover, .logIn:hover{
+.language1:hover, .language2:hover{
   color: #999;
   background-position: 0px -36px;
-} */
-.language{
+}
+.language1{
   left: 0px;
 }
-.contactUs{
+.language2{
   left: 112px;
+}
+.contactUs{
+  left: 224px;
   color: #999;
   background-position: 0px -36px;
 }
 .logIn{
   top: -3px;
-  left: 249px;
+  left: 361px;
   width: 222px;
   background-image: url(../img/topNavBtnLogin_bg.png);
+}
+.logIn:hover{
+  color: #ffd012;
 }
 .logIn img{
   display: inline-block;
@@ -394,7 +409,7 @@ a, a:hover{
 }
 .who-image-wrapper{
 	margin:30px 0px 10px 0px;
-	width:258px;
+	width:100%;
 	height:259px;
 }
 .who-image-wrapper img{
@@ -436,8 +451,8 @@ a, a:hover{
 	text-align:center;
 	text-decoration:none;
 }
-.who-pin-members a.active span{
-	display:block;
+.who-pin-members a.active{
+	background-position:0px -31px !important;
 }
 @media (max-width: 767px) {
   .arrowLeftWho, .legoWhoTopRightUp{
