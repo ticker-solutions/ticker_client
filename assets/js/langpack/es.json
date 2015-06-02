@@ -1,10 +1,14 @@
 {
 	"token": {
-		"Spanish":"English",
 		"Contact us":"Contactanos",
+        "Who has choose":"Quien ha elegido",
+        "dream with us?":"soñar con nosotros?",
 		"Login":"Entrar",
-		"The only way to...":"La unica forma de...",
-        "What do we do?":"Que hacemos?"
+		"Who are we?":"Quienes somos?",
+        "How do we":"Como hacemos",
+        "do things?":"las cosas?",
+        "Why do I need Dreamers":"Poque necesito soñadores",
+        "at my company?":"en mi compañia?"
 	},
 	"regex": [
 		["Budget", "งบประมาณ"],

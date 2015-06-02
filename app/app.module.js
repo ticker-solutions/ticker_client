@@ -1,1 +1,1 @@
-angular.module('tickerApp', ['ngRoute','ngResource']);
+angular.module('tickerApp', ['ngRoute','ngResource','ngSanitize']);

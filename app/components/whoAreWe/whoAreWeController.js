@@ -1,8 +1,8 @@
-var description1 = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit tortor felis, a ullamcorper erat semper sed. Vestibulum tincidunt eleifend lacus, maximus interdum urna accumsan maximus. Nulla facilisi. Pellentesque imperdiet ut erat venenatis convallis. Proin efficitur ante vel luctus maximus. Mauris sagittis nibh vitae augue suscipit, volutpat commodo augue commodo. Aenean vel venenatis erat, et iaculis ipsum.";
+var description1 = "Me apasiona materializar ideas que generen impacto social a traves del software.<br><br>Creo profundamente que los equipos de trabajo pueden mejorar su rendimiento a traves del fortalecimiento de sus relaciones.<br><br>Mi compromiso es facilitarle a las personas herramientas que les permitan plasmar y perseguir sus sueños.";
 
 var description2 = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit tortor felis, a ullamcorper erat semper sed. Vestibulum tincidunt eleifend lacus, maximus interdum urna accumsan maximus. Nulla facilisi. Pellentesque imperdiet ut erat venenatis convallis. Proin efficitur ante vel luctus maximus. Mauris sagittis nibh vitae augue suscipit.";
 
-var description3 = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit tortor felis, a ullamcorper erat semper sed. Vestibulum tincidunt eleifend lacus";
+var description3 = " Una de mis más grandes pasiones es el ser humano, cómo se relaciona, se transforma y crece. Estoy convencida que cada ser tiene el potencial para ser, hacer, y proyectar lo que le genera felicidad y que como seres sociales podemos lograr un impacto masivo.<br><br>Como Antropóloga de profesión y Project Manager de ocupación, percibo el mundo con conciencia social pero sin desconocer nuestra inmersión colectiva en un mundo de negocios, productividad, éxito y satisfacción.<br><br>Mi compromiso es irradiar energía, para facilitar un camino de autoconocimiento de las potencialidades y sueños personales que se refleje en resultados grupales.";
 
 
 var tickerMemberData = {};
