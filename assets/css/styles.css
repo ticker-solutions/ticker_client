@@ -40,6 +40,12 @@ a, a:hover{
 .weight-normal{
   font-weight: normal;
 }
+.width-100{
+	width: 100%;
+}
+.max-width{
+	max-width: 100%;
+}
 .navbar-default {
   background: none;
   border: none;
@@ -192,9 +198,12 @@ a, a:hover{
   background-position: 0px 0px;
   background-image: url(../img/topNavBtn_bg.png);
 }
-.language1:hover, .language2:hover{
-  color: #999;
-  background-position: 0px -36px;
+.language1{
+	background-position: 0px -36px;
+	color: #999;
+}
+.language2:hover{
+  color: #ffd012;
 }
 .language1{
   left: 0px;
@@ -312,7 +321,7 @@ a, a:hover{
   right: -39px;
 }
 @media (max-width: 767px) {  
-  .handVideo, .chalk, .eraser, .transportador, .legoVideoRight, .legoVideoLeft{
+  .handVideo, .chalk, .eraser, .transportador, .legoVideoRight, .legoVideoLeft, .clip{
     display: none;
   }
 }
@@ -473,4 +482,82 @@ a, a:hover{
     right:50%;
     margin-right: -129px;
   }
+}
+.theory-wrapper{
+	margin-top: 77px;
+}
+.theory-wrapper .eraser{
+	top: 438px;
+  left: 126px;
+}
+.theory-wrapper .chalk{
+	top: 333px;
+  left: 816px;
+}
+.theory-wrapper .transportador{
+	top: 232px;
+  left: 816px;
+}
+.theory-wrapper .legoVideoLeft{
+  bottom: -59px;
+  left: 212px;
+}
+.clip{
+	position: absolute;
+	top: 222px;
+  left: 786px;
+}
+.theory-wrapper .legoVideoRight{
+	bottom: -30px;
+  right: 146px;
+}
+.theory-wrapper .legoTopLeft{
+	position: absolute;
+	top: 130px;
+  left: 190px;
+}
+.theory{
+	max-height: 375px;
+	text-align: center;
+}
+.theory img{
+	display: inline-block;
+	/* position: absolute;
+	top: 0px; 
+	left: 50%;
+	margin-left: -50%; */
+}
+.theory-buttons-wrapper{
+	text-align:center;
+}
+.theory-button{
+	position: relative;
+	display: inline-block;
+	width: 92px;
+	height: 87px;
+	background-position: 0px 0px;
+	background-image: url(../img/teoria-btn.png);
+	font-size: 50px;
+	color: #fff;
+	cursor: pointer;
+	line-height: 45px;
+  padding-left: 34px;
+	margin: 0px 3px;
+}
+.theory-button:hover{
+	background-position: 0px -87px;
+}
+.theory-button .info{
+	display: none;
+	position: absolute;
+	width: 110px;
+	height: auto;
+	text-align: center;
+	font-size: 21px;
+	bottom: -14px;
+  line-height: 14px;
+  left: -30px;
+}
+.theory-button:hover .info{
+	display: inline-block;
 }
