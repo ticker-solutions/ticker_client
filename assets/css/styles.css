@@ -547,6 +547,9 @@ a, a:hover{
 .theory-button:hover{
 	background-position: 0px -87px;
 }
+.theory-button.active{
+	background-position: 0px -87px !important;
+}
 .theory-button .info{
 	display: none;
 	position: absolute;
