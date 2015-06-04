@@ -19,6 +19,12 @@ angular.module('tickerApp').config(function($routeProvider) {
             controller  : 'getPinTickerMembersController'            
         })
     
+        // route for the about page
+        .when('/whatDoWeDo', {
+            templateUrl : 'app/components/whatDoWeDo/whatDoWeDo.html',
+            controller  : 'whatDoWeDoController'            
+        })
+    
 
 
 });
