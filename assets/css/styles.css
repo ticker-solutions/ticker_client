@@ -218,7 +218,7 @@ a, a:hover{
 }
 .logIn{
   top: -3px;
-  left: 361px;
+  left: 346px;
   width: 222px;
   background-image: url(../img/topNavBtnLogin_bg.png);
 }
@@ -248,7 +248,7 @@ a, a:hover{
 .titleText{
   width: 100%;
   height: auto;
-  margin-top: 125px;
+  margin-top: 90px;
   text-align: center;
   font-size: 32px;
   line-height: 28px;
@@ -291,8 +291,8 @@ a, a:hover{
 }
 .handVideo{
   position: absolute;
-  top: -158px;
-  right: -230px;
+  top: -126px;
+  right: -181px;
   z-index: 1;
 }
 .transportador{
@@ -492,11 +492,13 @@ a, a:hover{
 }
 .theory-wrapper .chalk{
 	top: 333px;
-  left: 816px;
+  left: 50%;
+	margin-left: 300px;
 }
 .theory-wrapper .transportador{
 	top: 232px;
-  left: 816px;
+  left: 50%;
+	margin-left: 300px;
 }
 .theory-wrapper .legoVideoLeft{
   bottom: -59px;
@@ -505,7 +507,8 @@ a, a:hover{
 .clip{
 	position: absolute;
 	top: 222px;
-  left: 786px;
+  left: 50%;
+	margin-left: 270px;
 }
 .theory-wrapper .legoVideoRight{
 	bottom: -30px;
