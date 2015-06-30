@@ -8,9 +8,9 @@ angular.module('tickerApp').config(function($routeProvider) {
         })
 
           // route for the about page
-        .when('/leader', {
-            templateUrl : 'app/components/leader/leaderView.html',
-            controller  : 'facilitatorLeaderController'
+        .when('/administrative', {
+            templateUrl : 'app/components/administrative/administrativeView.html',
+            controller  : 'administrativeController'
         })
     
         // route for the about page

@@ -1,0 +1,76 @@
+<!-- leaderView.html -->
+
+<style>
+.facilatator_menu_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.facilitator_menu_a {
+    display: block;
+    width: 90px;
+    border: 0;
+}
+    
+button.facilitator_menu_a:link, button.facilitator_menu_a:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+button.facilitator_menu_a:hover, button.facilitator_menu_a:active {
+    background-color: #7A991A;
+}
+
+    
+.admitrative_menu_box {
+    float:left;
+    width: 20%
+}
+
+.section_box {
+ 
+}
+    
+    
+</style>
+
+<div ng-controller="administrativeController" style="width:800px; margin:0 auto;">
+
+    <br><br><br><br><br><br><br><br>
+
+    <div class="admitrative_menu_box">
+        <ul class="facilatator_menu_ul" >
+          <li><button ng-click="changeAdminAction('company')" class="facilitator_menu_a">Empresa</button></li>
+          <li><button ng-click="changeAdminAction('team')" class="facilitator_menu_a">Equipos</button></li>
+          <li><button ng-click="changeAdminAction()" class="facilitator_menu_a">Soñadores</button></li>
+          <li><button ng-click="changeAdminAction()" class="facilitator_menu_a">Biblioteca de sueños</button></li>
+          <li><button ng-click="changeAdminAction()" class="facilitator_menu_a">Mapa de sueños</button></li>  
+        </ul>
+    </div>
+    
+    <div class="section_box" ng-include="template"></div>
+    
+    
+    <!--
+    <form action="http://localhost:8080/TickerCore/rest/dreamsEndpoint/upload" method="post" enctype="multipart/form-data">
+        file:
+        <br>
+        <input type="file" name="file" multiple="multiple">
+
+        <input type="submit" value="send">
+    </form>
+
+
+-->
+
+</div>
