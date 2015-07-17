@@ -28,7 +28,7 @@ function teamController($scope,$location,companyFactory,countryFactory,cityFacto
     // all the items
     $scope.knownItems = [];
     // the item being added
-    $scope.newCompany = { name: '', city: {city_id: ''} };
+    $scope.newTeam = { name: '', company: {company_id: ''} };
     // indicates if the view is being loaded
     $scope.loading = false;
     // indicates if the view is in add mode
@@ -41,7 +41,7 @@ function teamController($scope,$location,companyFactory,countryFactory,cityFacto
         $scope.addMode = !$scope.addMode;
  
         // Default new item name is empty
-        $scope.newCompany.name = '';
+        $scope.newTeam.name = '';
     };
  
     // Toggle an item between normal and edit mode
@@ -70,15 +70,15 @@ function teamController($scope,$location,companyFactory,countryFactory,cityFacto
         }
     };
  
-    // Creates the 'newCompany' on the server
-    $scope.createCompany = function () {
+    // Creates the 'newTeam' on the server
+    $scope.createTeam = function () {
         // Check if the item is already on the list
-        var duplicated = isNameDuplicated($scope.newCompany.name);
+        var duplicated = isNameDuplicated($scope.newTeam.name);
  
         if (!duplicated) {
             
             $scope.loading = true;
-            companyFactory.createCompany({"companyDTO":{"name": $scope.newCompany.name, "cityDTO": {"city_id":$scope.newCompany.city.city_id} }},function (createdCompany) {         
+            teamFactory.createTeam({"teamDTO":{"name": $scope.newTeam.name, "companyDTO": {"company_id":$scope.newTeam.company.company_id} }},function (createdCompany) {         
                 $scope.loading = false;
             }); 
             
@@ -112,8 +112,16 @@ function teamController($scope,$location,companyFactory,countryFactory,cityFacto
     
      $scope.grabCities = function () {
         $scope.loading = true;
-        cityFactory.getAllCitiesByCountry({countryDTO: { country_id: $scope.newCompany.country.country_id }},function (cities) {        
+        cityFactory.getAllCitiesByCountry({countryDTO: { country_id: $scope.newTeam.country.country_id }},function (cities) {        
             $scope.cities = cities.cityDTOs;
+            $scope.loading = false;
+        });
+    };
+    
+    $scope.grabCompanies = function () {
+        $scope.loading = true;
+        companyFactory.getAllCompaniesByCity({companyDTO: { cityDTO:{ city_id:  $scope.newTeam.city.city_id  } }},function (companies) {  
+            $scope.companies = companies.companyDTOs;
             $scope.loading = false;
         });
     };

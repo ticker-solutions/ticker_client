@@ -35,7 +35,9 @@ cityFactory.$inject = ['$resource'];
 
 function cityFactory($resource) {
     return $resource('http://localhost:8484/TickerCore/rest/cityEndpoint', {}, {
-        getAllCitiesByCountry: { method: 'POST' }
+        getAllCitiesByCountry: { 
+            method: 'POST' 
+        }
     })
 }
 
@@ -45,7 +47,13 @@ teamFactory.$inject = ['$resource'];
 
 function teamFactory($resource) {
     return $resource('http://localhost:8484/TickerCore/rest/teamEndpoint', {}, {
-        getAllTeams: { method: 'GET' }
+        getAllTeams: {
+            method: 'GET' 
+        },
+        createTeam: {
+            method: 'PUT' 
+        }
+        
     })
 }
 

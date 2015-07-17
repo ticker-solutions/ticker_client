@@ -35,27 +35,34 @@
             <!-- Content columns-->
             <td>
                 <form name="addForm">
-                    <input type="text" ng-model="newCompany.name" class="form-control" required placeholder="input the company name" ng-keydown="saveOnEnter(company, $event)" required />                    
+                    <input type="text" ng-model="newTeam.name" class="form-control" required placeholder="input the company name" ng-keydown="saveOnEnter(company, $event)" required />                    
                 </form>
             </td>
              <td>
                 <form name="addForm">                   
-                    <select ng-model="newCompany.country.country_id" ng-options="item.country_id as item.name for item in countries" ng-change="grabCities()">
+                    <select ng-model="newTeam.country.country_id" ng-options="item.country_id as item.name for item in countries" ng-change="grabCities()">
                         <option value="">Select a country</option>
                     </select>
                 </form>
             </td>
             <td>
                 <form name="addForm">                   
-                    <select ng-model="newCompany.city.city_id" ng-options="item.city_id as item.name for item in cities"  ng-change="createCompany()">
+                    <select ng-model="newTeam.city.city_id" ng-options="item.city_id as item.name for item in cities"  ng-change="grabCompanies()">
                         <option value="">Select a city</option>
+                    </select>
+                </form>
+            </td>
+            <td>
+                <form name="addForm">                   
+                    <select ng-model="newTeam.company.company_id" ng-options="item.company_id as item.name for item in companies"  ng-change="createTeam()">
+                        <option value="">Select a company</option>
                     </select>
                 </form>
             </td>
         </tr>
 
         <!--Content-->
-        <tr ng-repeat="company in companies">
+        <tr ng-repeat="team in teams">
             <!--Buttons column-->
             <td>
                 <!--Edit + Delete-->
@@ -79,35 +86,49 @@
             <!-- Company -->
             <td style="vertical-align:middle">
                 <!--Name read mode-->
-                <span ng-show="company.editMode == null || company.editMode == false" ng-dblclick="toggleEditMode(company)">
-                        {{company.name}}
+                <span ng-show="team.editMode == null || team.editMode == false" ng-dblclick="toggleEditMode(team)">
+                        {{team.name}}
                     </span>
                 <!--Name edit mode-->
                 <form name="editForm">
-                    <input ng-model="company.name" ng-show="company.editMode" required ng-keydown="updateOnEnter(company, $event)" class="form-control" />
+                    <input ng-model="team.name" ng-show="team.editMode" required ng-keydown="updateOnEnter(team, $event)" class="form-control" />
                 </form>
             </td>
             <!-- Country -->
             <td style="vertical-align:middle">
                 <!--Name read mode-->
-                <span ng-show="company.editMode == null || company.editMode == false" ng-dblclick="toggleEditMode(company)">
-                        {{company.countryDTO.name}}
+                <span ng-show="team.editMode == null || team.editMode == false" ng-dblclick="toggleEditMode(team)">
+                        {{team.countryDTO.name}}
                     </span>
                 <!--Name edit mode-->
                 <form name="editForm">
-                    <input ng-model="company.name" ng-show="company.editMode" required ng-keydown="updateOnEnter(company, $event)" class="form-control" />
+                    <input ng-model="team.name" ng-show="team.editMode" required ng-keydown="updateOnEnter(team, $event)" class="form-control" />
                 </form>
             </td>
             <!-- City -->
             <td style="vertical-align:middle">
                 <!--Name read mode-->
-                <span ng-show="company.editMode == null || company.editMode == false" ng-dblclick="toggleEditMode(company)">
-                        {{company.cityDTO.name}}
+                <span ng-show="team.editMode == null || team.editMode == false" ng-dblclick="toggleEditMode(team)">
+                        {{team.cityDTO.name}}
                     </span>
                 <!--Name edit mode-->
                 <form name="editForm">
-                    <select ng-model="city" ng-show="company.editMode" ng-options="city as city.name for city in company.cityDTO" ng-change="grabCities()" class="form-control" >
-                        <option value="">{{company.cityDTO.name}}</option>
+                    <select ng-model="city" ng-show="team.editMode" ng-options="city as city.name for city in team.cityDTO" ng-change="grabCities()" class="form-control" >
+                        <option value="">{{team.cityDTO.name}}</option>
+                    </select>
+               
+                </form>
+            </td>
+             <!-- Company -->
+            <td style="vertical-align:middle">
+                <!--Name read mode-->
+                <span ng-show="team.editMode == null || team.editMode == false" ng-dblclick="toggleEditMode(team)">
+                        {{team.companyDTO.name}}
+                    </span>
+                <!--Name edit mode-->
+                <form name="editForm">
+                    <select ng-model="company" ng-show="team.editMode" ng-options="company as company.name for company in team.companyDTO" ng-change="grabCities()" class="form-control" >
+                        <option value="">{{team.companyDTO.name}}</option>
                     </select>
                
                 </form>
