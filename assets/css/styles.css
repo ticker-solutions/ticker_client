@@ -116,7 +116,7 @@ a, a:hover{
 }
 .socialMedia{
   position: absolute;
-  top: -134px;
+  top: -100px;
   left: 20px;
   width: 126px;
   height: 91px;
@@ -245,6 +245,59 @@ a, a:hover{
     width: 80px;
   }
 }
+.lateral-nav{
+	position: absolute;
+	top: 170px;
+	left: 40px;
+	width: 110px;
+	height: 300px;
+	list-style: none;
+	padding: 0px;
+	z-index: 1000;
+}
+@media (max-width: 767px) {  
+	.lateral-nav{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	.lateral-nav li{
+		width: 110px;
+		height: 110px;
+		display: inline-block;
+	}
+}
+.lateral-nav a{
+	display: block;
+	width: 110px;
+	height: 110px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+.lateral-nav a:hover{
+	background-position: 0px -110px;
+}
+.lateral-nav a.active{
+	background-position: 0px -110px !important;
+}
+.lat-btn-dreams{
+	background-image: url(../img/lat-btn-dreams.png);
+}
+.lat-btn-winner{
+	background-image: url(../img/lat-btn-winner.png);
+}
+.lat-btn-rr{
+	background-image: url(../img/lat-btn-rr.png);
+}
+.lat-btn-felicidad{
+	background-image: url(../img/lat-btn-felicidad.png);
+}
+.lat-btn-roi{
+	background-image: url(../img/lat-btn-roi.png);
+}
 .titleText{
   width: 100%;
   height: auto;
@@ -321,7 +374,7 @@ a, a:hover{
   right: -39px;
 }
 @media (max-width: 767px) {  
-  .handVideo, .chalk, .eraser, .transportador, .legoVideoRight, .legoVideoLeft, .clip{
+  .handVideo, .chalk, .eraser, .transportador, .legoVideoRight, .legoVideoLeft, .clip, .legoTopLeft{
     display: none;
   }
 }
