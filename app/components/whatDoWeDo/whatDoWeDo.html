@@ -22,10 +22,10 @@
         <div  ng-controller="whatDoWeDoController" class="row theory-wrapper">
         
         	<!-- lateral nav -->
-					<ul class="lateral-nav">
-						<li><a href="" class="lat-btn-rr"></a></li>
-						<li><a href="" class="lat-btn-felicidad"></a></li>
-						<li><a href="" class="lat-btn-roi"></a></li>
+					<ul class="lateral-nav" id="theoryButtonList">
+						<li><a href="" class="lat-btn-rr active" ng-click="changeActiveButton('rr')" id='rr'></a></li>
+						<li><a href="" class="lat-btn-happiness" ng-click="changeActiveButton('happiness')" id='happiness'></a></li>
+						<li><a href="" class="lat-btn-roi" ng-click="changeActiveButton('roi')" id='roi'></a></li>
 					</ul>
         
         	<!-- elementos -->
@@ -38,36 +38,8 @@
         	<img src="assets/img/clip.png" class="clip">
         	<!-- elementos -->
         	
-        	<div class="col-sm-12 theory">
-        		<img ng-src="assets/img/{{relational_competence}}" class="max-width">
-        	</div>
-        	<div class="col-sm-12 theory-buttons-wrapper">
-        		<div ng-class="legitimarseClass" ng-click="loadTickerInfograma('legitimarse')">
-        			1
-        			<span class="info">
-        				Legitimarse entre si
-        			</span>
-        		</div>
-        		<div ng-class="compromisosClass" ng-click="loadTickerInfograma('compromisos')">
-        			2
-        			<span class="info">
-        				Honrar compromisos
-        			</span>
-        		</div>
-        		<div ng-class="escucharnosClass" ng-click="loadTickerInfograma('escucharnos')">
-        			3
-        			<span class="info">
-        				Escucharnos
-        			</span>
-        		</div>
-        		<div ng-class="inferenciasClass" ng-click="loadTickerInfograma('inferencias')">
-        			4
-        			<span class="info">
-        				Inferencias
-        			</span>
-        		</div>
-        		
-        	</div>
+            <div class="section_box" ng-include="theorySection"></div>
+        	
         </div>
         <!-- contenedor teoria -->
 
