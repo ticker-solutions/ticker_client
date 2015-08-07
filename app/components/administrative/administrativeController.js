@@ -11,6 +11,9 @@ function administrativeController($scope,$rootScope,$location,companyFactory,cou
          if(section == "team"){
              $scope.template = '/app/components/administrative/sections/team/teamView.html';
          }
+         if(section == "dreamer"){
+             $scope.template = '/app/components/administrative/sections/dreamer/dreamerView.html';
+         }
     }; // end save  
        
 }

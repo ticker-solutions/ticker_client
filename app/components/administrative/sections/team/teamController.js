@@ -100,7 +100,7 @@ function teamController($scope,$location,companyFactory,countryFactory,cityFacto
             $scope.loading = false;
         });
     };
-    
+
 
     $scope.getAllCountries = function () {
         $scope.loading = true;
