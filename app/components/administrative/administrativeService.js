@@ -52,8 +52,23 @@ function teamFactory($resource) {
         },
         createTeam: {
             method: 'PUT' 
+        },
+        getAllTeamsByCompany: {
+            method: 'POST'
         }
         
+    })
+}
+
+angular.module('tickerApp').factory('personFactory', personFactory);
+
+personFactory.$inject = ['$resource'];
+
+function personFactory($resource) {
+    return $resource('http://localhost:8484/TickerCore/rest/personEndpoint', {}, {
+        getPeopleByTeam: {
+            method: 'POST'
+        }        
     })
 }
 

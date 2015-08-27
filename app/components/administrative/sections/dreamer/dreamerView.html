@@ -1,0 +1,236 @@
+<html >
+    
+    <div ng-controller="dreamerController">
+        
+      
+            <select ng-model="company" ng-options="company as company.name for company in companies" ng-change="getAllTeamsByCompany()" class="form-control" >
+                    <option value="">Select a company</option>
+            </select>
+        
+            <select ng-model="team" ng-options="team as team.name for team in teams" ng-change="getPeopleByTeam()" class="form-control" >
+                    <option value="">Select a team</option>
+            </select>
+            
+  
+        
+        
+        
+        <!--AngularJS SPA CRUD table-->
+    <table class="table table-condensed table-hover table-striped" ng-hide="loading">
+        <!-- Header-->
+        <tr class="panel-title">
+            <!--Buttons column-->
+            <th style="width: 100px;">
+                <!--Add + Cancel-->
+                <div class="btn-toolbar"><i class="btn glyphicon glyphicon-plus" ng-click="toggleAddMode()" title="Add" ng-hide="addMode"></i>
+                </div>
+                <div class="btn-toolbar"><i class="btn glyphicon glyphicon-minus" ng-click="toggleAddMode()" title="Cancel" ng-show="addMode"></i>
+                </div>
+            </th>
+
+            <!-- Content columns-->
+            <th style="vertical-align:middle">Nombre</th>
+            <th style="vertical-align:middle">Apellido</th>
+            <th style="vertical-align:middle">Email</th>
+        </tr>
+
+        <!--Row with the new item-->
+        <tr ng-show="addMode" style="background: rgb(251, 244, 222)">
+            <!--Buttons column-->
+            <td>
+                <div class="btn-toolbar">
+                    <!--Create + Cancel-->
+                    <div class="btn-group">
+                        <i class="btn glyphicon glyphicon-floppy-disk" ng-click="createItem()" title="Create" ng-disabled="addForm.$invalid"></i>
+                        <i class="btn glyphicon glyphicon-remove" ng-click="toggleAddMode()" title="Cancel"></i>
+                    </div>
+                </div>
+            </td>
+            <!-- Content columns-->
+            <td>
+                <form name="addForm">
+                    <input type="text" ng-model="newDreamer.name" class="form-control" placeholder="input the dreamer name"  required /> 
+                </form>
+            </td>
+             <td>
+                <form name="addForm">                   
+                <input type="text" ng-model="newDreamer.last_name" class="form-control" placeholder="input the dreamer name"required />  
+                </form>
+            </td>
+            <td>
+                <form name="addForm">                   
+                    <input type="text" ng-model="newDreamer.mail" class="form-control" placeholder="input the dreamer name" required /> 
+                </form>
+            </td>
+        </tr>
+
+        <!--Content-->
+        <tr ng-repeat="dreamer in dreamers">
+            <!--Buttons column-->
+            <td>
+                <!--Edit + Delete-->
+                <div class="btn-toolbar" ng-show="dreamer.editMode == null || dreamer.editMode == false">
+                    <div class="btn-group">
+                        <i class="btn glyphicon glyphicon-edit" ng-click="toggleEditMode(dreamer)" title="Edit"></i>
+                        <i class="btn glyphicon glyphicon-trash" ng-click="deleteItem(dreamer)" title="Delete" data-toggle="modal"></i>
+                    </div>
+                </div>
+
+                <!--Save + Cancel-->
+                <div class="btn-toolbar" ng-show="dreamer.editMode">
+                    <div class="btn-group">
+                        <i class="btn glyphicon glyphicon-floppy-disk" ng-click="updateItem(dreamer)" title="Save" ng-disabled="editForm.$invalid"></i>
+                        <i class="btn glyphicon glyphicon-remove" ng-click="toggleEditMode(dreamer)" title="Cancel"></i>
+                    </div>
+                </div>
+            </td>
+
+            <!-- Content columns-->
+            <!-- Company -->
+            <td style="vertical-align:middle">
+                <!--Name read mode-->
+                <span ng-show="dreamer.editMode == null || dreamer.editMode == false" ng-dblclick="toggleEditMode(company)">
+                        {{dreamer.name}}
+                    </span>
+                <!--Name edit mode-->
+                <form name="editForm">
+                    <input ng-model="dreamer.name" ng-show="dreamer.editMode" required ng-keydown="updateOnEnter(dreamer, $event)" class="form-control" />
+                </form>
+            </td>
+            <!-- Country -->
+            <td style="vertical-align:middle">
+                <!--Name read mode-->
+                <span ng-show="company.editMode == null || company.editMode == false" ng-dblclick="toggleEditMode(dreamer)">
+                        {{dreamer.last_name}}
+                    </span>
+                <!--Name edit mode-->
+                <form name="editForm">
+                    <input ng-model="company.name" ng-show="dreamer.editMode" required ng-keydown="updateOnEnter(dreamer, $event)" class="form-control" />
+                </form>
+            </td>
+            <!-- City -->
+            <td style="vertical-align:middle">
+                <!--Name read mode-->
+                <span ng-show="dreamer.editMode == null || dreamer.editMode == false" ng-dblclick="toggleEditMode(dreamer)">
+                        {{dreamer.mail}}
+                    </span>
+                <!--Name edit mode-->
+                <form name="editForm">
+                 
+               
+                </form>
+            </td>
+        </tr>
+    </table>
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    </div>
+    
+    
+    
+    
+
+    <div ng-controller="UploadController">
+        <table>
+            <tr>
+                <td>
+                    <b>perfil izquierdo</b><br />   
+                    <img width="80" height="80" ng-src="{{imageSrc}}" />   <br/>
+                    <form>
+                        <input type="file" ng-file-select="onFileSelect($files)" >
+                    </form>
+                </td>
+                
+                <td>
+                    <b>perfil izquierdo</b><br />   
+                    <img width="80" height="80" ng-src="{{imageSrc}}" />   <br/>
+                    <form>
+                        <input type="file" ng-file-select="onFileSelect($files)" >
+                    </form>
+                </td>
+                
+                <td>
+                    <b>perfil izquierdo</b><br />   
+                    <img width="80" height="80" ng-src="{{imageSrc}}" />   <br/>
+                    <form>
+                        <input type="file" ng-file-select="onFileSelect($files)" >
+                    </form>
+                </td>
+            
+            
+            </tr>
+            
+            <tr>
+                <td>
+                    <b>perfil izquierdo</b><br />   
+                    <img width="80" height="80" ng-src="{{imageSrc}}" />   <br/>
+                    <form>
+                        <input type="file" ng-file-select="onFileSelect($files)" >
+                    </form>
+                </td>
+                
+                <td>
+                    <b>perfil izquierdo</b><br />   
+                    <img width="80" height="80" ng-src="{{imageSrc}}" />   <br/>
+                    <form>
+                        <input type="file" ng-file-select="onFileSelect($files)" >
+                    </form>
+                </td>
+                
+                <td>
+                    <b>perfil izquierdo</b><br />   
+                    <img width="80" height="80" ng-src="{{imageSrc}}" />   <br/>
+                    <form>
+                        <input type="file" ng-file-select="onFileSelect($files)" >
+                    </form>
+                </td>
+            
+            
+            </tr>
+            
+            <tr>
+                <td>
+                  
+                </td>
+                
+                <td>
+                    <input type="button" value="Guardar">                
+                <td>
+                  
+                </td>
+            
+            
+            </tr>
+        
+        </table>
+            
+       
+      
+    </div>
+  
+  <!--<b>Progress:</b>
+  <progress value="{{progress}}"></progress>!-->
+    </div>
+    
+    <!--Loading indicator-->
+    <img src="../../../../../assets/img/loading.gif" ng-show="loading" class="center-block" title="Loading..." />
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+</html>

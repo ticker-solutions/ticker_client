@@ -1,8 +1,10 @@
-<!-- lateral nav -->
-<ul class="lateral-nav">
-	<li><a href="" class="lat-btn-dreams"></a></li>
-	<li><a href="" class="lat-btn-winner"></a></li>
-</ul>
+ <!-- lateral nav -->
+<div ng-controller="howDoWeDoThingsController">
+    <ul class="lateral-nav" id="serviceButtonList">
+        <li><a href="" class="lat-btn-dream active" ng-click="changeActiveButton('dream')" id='dream'></a></li>
+        <li><a href="" class="lat-btn-healthy" ng-click="changeActiveButton('healthy')" id='healthy'></a></li>
+    </ul>
+</div>
 
 <!-- home tittle text -->
 <div class="titleText theChickenLove_font">

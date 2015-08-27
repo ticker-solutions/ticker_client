@@ -283,16 +283,16 @@ a, a:hover{
 .lateral-nav a.active{
 	background-position: 0px -110px !important;
 }
-.lat-btn-dreams{
+.lat-btn-dream{
 	background-image: url(../img/lat-btn-dreams.png);
 }
-.lat-btn-winner{
+.lat-btn-healthy{
 	background-image: url(../img/lat-btn-winner.png);
 }
 .lat-btn-rr{
 	background-image: url(../img/lat-btn-rr.png);
 }
-.lat-btn-felicidad{
+.lat-btn-happiness{
 	background-image: url(../img/lat-btn-felicidad.png);
 }
 .lat-btn-roi{
