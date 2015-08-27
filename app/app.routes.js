@@ -25,6 +25,12 @@ angular.module('tickerApp').config(function($routeProvider) {
             controller  : 'whatDoWeDoController'            
         })
     
+        // route for the about page
+        .when('/whoHasChose', {
+            templateUrl : 'app/components/whoHasChoseDream/whoHasChoseDream.html',
+            controller  : 'whoHasChoseDreamController'            
+        })
+    
 
 
 });
