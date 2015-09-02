@@ -9,12 +9,12 @@ angular.module('tickerApp').controller('whatDoWeDoController',['$scope',function
                 $('#'+buttonId).attr('class','lat-btn-rr active');
                 $('#happiness').attr('class','lat-btn-happiness');
                 $('#roi').attr('class','lat-btn-roi');
-                $scope.theorySection = '/app/components/whatDoWeDo/sections/resultsAndRelationships.html';
+                $scope.theorySection = 'landingPage.html';
             }else if(idValue==buttonId && idValue=="happiness"){
                 $('#'+buttonId).attr('class','lat-btn-happiness active');
                 $('#rr').attr('class','lat-btn-rr');
                 $('#roi').attr('class','lat-btn-roi');
-                $scope.theorySection = '/app/components/whatDoWeDo/sections/happiness.html';
+                $scope.theorySection = '/app/components/whatDoWeDo/sections/resultsAndRelationships.html';
             }else if(idValue==buttonId && idValue=="roi"){
                 $('#'+buttonId).attr('class','lat-btn-roi active');
                 $('#rr').attr('class','lat-btn-rr');
@@ -24,5 +24,5 @@ angular.module('tickerApp').controller('whatDoWeDoController',['$scope',function
         
        // $('#'+id).attr('class','active');
     };
-        $scope.theorySection = '/app/components/whatDoWeDo/sections/resultsAndRelationships.html';
+        $scope.theorySection = 'landingPage.html';
 }]);

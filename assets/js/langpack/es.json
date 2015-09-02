@@ -1,14 +1,24 @@
 {
 	"token": {
 		"Contact us":"Contactanos",
-        "Who has choose":"Quien ha elegido",
+        "Who has choosen":"Quien ha elegido",
         "dream with us?":"soñar con nosotros?",
 		"Login":"Entrar",
 		"Who are we?":"Quienes somos?",
         "How do we":"Como hacemos",
         "do things?":"las cosas?",
-        "Why do I need Dreamers":"Poque necesito soñadores",
-        "at my company?":"en mi compañia?"
+        "Why do I need":"Poque necesito",
+        "happy teams?":"equipos felices?",
+        "The only way to feel your":"La unica forma de sentir que tus",
+        "dreams":"sueños",
+        "are coming":"se estan convirtiendo en",
+        "true":"realidad",
+        "is":"es",
+        "having them close to your":"tenerlos cerca a tus",
+        "mind":"pensamientos",
+        "and your":"y tus",
+        "eyes.":"ojos"
+        
 	},
 	"regex": [
 		["Budget", "งบประมาณ"],

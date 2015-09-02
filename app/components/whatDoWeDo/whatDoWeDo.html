@@ -19,24 +19,16 @@
 <body>
 
         <!-- contenedor teoria -->
-        <div  ng-controller="whatDoWeDoController" class="row theory-wrapper">
+        <div  ng-controller="whatDoWeDoController">
         
         	<!-- lateral nav -->
 					<ul class="lateral-nav" id="theoryButtonList">
 						<li><a href="" class="lat-btn-rr active" ng-click="changeActiveButton('rr')" id='rr'></a></li>
-						<li><a href="" class="lat-btn-happiness" ng-click="changeActiveButton('happiness')" id='happiness'></a></li>
-						<li><a href="" class="lat-btn-roi" ng-click="changeActiveButton('roi')" id='roi'></a></li>
+				        <li><a href="" class="lat-btn-happiness" ng-click="changeActiveButton('happiness')" id='happiness'></a></li>
+<!-- 						<li><a href="" class="lat-btn-roi" ng-click="changeActiveButton('roi')" id='roi'></a></li> -->
 					</ul>
         
-        	<!-- elementos -->
-        	<img src="assets/img/eraser.png" class="eraser">
-        	<img src="assets/img/chalk.png" class="chalk">
-        	<img src="assets/img/transportador.png" class="transportador">
-        	<img src="assets/img/legoVideoLeft.png" class="legoVideoLeft">
-        	<img src="assets/img/legoVideoRight.png" class="legoVideoRight">
-        	<img src="assets/img/lego-top-left-small.png" class="legoTopLeft">
-        	<img src="assets/img/clip.png" class="clip">
-        	<!-- elementos -->
+        	
         	
             <div class="section_box" ng-include="theorySection"></div>
         	

@@ -4,7 +4,7 @@ angular.module('tickerApp').config(function($routeProvider) {
 
         // route for the about page
         .when('/', {
-            templateUrl : 'app/components/howDoWeDoThings/howDoWeDoThings.html'
+            templateUrl : 'landingPage.html'
         })
 
           // route for the about page
@@ -29,6 +29,12 @@ angular.module('tickerApp').config(function($routeProvider) {
         .when('/whoHasChose', {
             templateUrl : 'app/components/whoHasChoseDream/whoHasChoseDream.html',
             controller  : 'whoHasChoseDreamController'            
+        })
+    
+        // route for the about page
+        .when('/howDoWeDoThings', {
+            templateUrl : 'app/components/howDoWeDoThings/howDoWeDoThings.html',
+            controller  : 'howDoWeDoThingsController'            
         })
     
 
